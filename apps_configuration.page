@@ -1,13 +1,25 @@
-<div class="section">
+[Start Slideshow](http://127.0.0.1:5001/apps_configuration?export&format=Slidy)
 
-CCLE Redirect
-=============
 
-Basic Idea
-----------
-
-![FileDropjs1](/FileDropjs1.png)
+# Page 1
+[Back to Wiki](http://127.0.0.1:5001/apps_configuration)
 
 ![Drawing](/drawing.svg)
 
-</div>
+* one
+* two
+* three
+
+# Page 2
+[Back to Wiki](http://127.0.0.1:5001/apps_configuration)
+
+* one
+* two
+* three
+
+# Page 3
+[Back to Wiki](http://127.0.0.1:5001/apps_configuration)
+
+* one
+* two
+* three
