@@ -1,23 +1,300 @@
-[Start Slideshow](http://127.0.0.1:5001/apps_configuration?export&format=Slidy)
+<div id="wrapper">
 
+<div id="header">
 
-# Page 1
-[Back to Wiki](http://127.0.0.1:5001/apps_configuration)
+<div class="l-page has-no-sidebars">
 
-* one
-* two
-* three
+<div class="l-header-wrapper">
 
-# Page 2
-[Back to Wiki](http://127.0.0.1:5001/apps_configuration)
+<div class="l-header" role="banner">
 
-* one
-* two
-* three
+<div class="l-region l-region--branding">
 
-# Page 3
-[Back to Wiki](http://127.0.0.1:5001/apps_configuration)
+<div class="panel-pane pane-page-logo">
 
-* one
-* two
-* three
+<div class="pane-content">
+
+[![Home](logo.png)](http://www.library.ucla.edu/ "Home"){#logo}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="l-navigation-wrapper">
+
+<div id="menu" class="l-navigation">
+
+<div class="l-region l-region--navigation">
+
+<div class="panel-pane pane-page-primary-links">
+
+<div class="pane-content" style="white-space: nowrap">
+
+CCLE Redirect
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="l-main-wrapper">
+
+<div class="l-main">
+
+<div class="l-content" role="main">
+
+[]()
+<div class="panel-pane pane-page-content">
+
+<div class="pane-content">
+
+<div class="sidebar-left panel-sidebar-left with-sidebar-left">
+
+\
+
+</div>
+
+<div id="content">
+
+[Start]()
+=========
+
+-   Previous Slide
+-   <span id="slide-number"></span>/<span id="slide-total"></span>
+-   Next Slide
+
+<div id="deck">
+
+<div class="section">
+
+\
+\
+\
+UCLA Library CCLE Redirect
+==========================
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+Darrow Cole
+-----------
+
+</div>
+
+<div class="section">
+
+CCLE Redirect
+=============
+
+Basic Idea
+----------
+
+![One LibGuide](images/drawing.svg)
+
+</div>
+
+<div class="section">
+
+Requirements
+============
+
+Developed in conjunction with the project committee
+---------------------------------------------------
+
+-   Must work with our CMS ===&gt; Drupal Module
+-   Minimize db access
+-   Require no special knowledge to create incoming link
+-   Accommodate multiple guides per class
+-   Return the most detailed applicable LibGuide
+
+</div>
+
+<div class="section">
+
+CCLE Redirect - case \#1
+========================
+
+Basic Idea: Go to the LibGuide when the class link is clicked
+-------------------------------------------------------------
+
+![One LibGuide](images/drawing.svg)
+
+</div>
+
+<div class="section">
+
+CCLE Redirect - case \#2
+========================
+
+A bit more complicated
+----------------------
+
+![Many LibGuides](images/drawing2.svg)
+
+</div>
+
+<div class="section">
+
+CCLE Redirect - case \#3
+========================
+
+And, a bit more
+---------------
+
+![Many LibGuides](images/drawing3.svg)
+
+</div>
+
+<div class="section">
+
+Possible Guides for one Class
+=============================
+
+Department Guide ( subject )
+Course Guide ( course )
+Section Guide ( class )
+
+</div>
+
+<div class="section">
+
+Basic Approach
+==============
+
+Mapping the link
+----------------
+
+-   So, given this: http://www.mysite.edu/econ\_101
+-   How do I go to this: http://www.mysite.edu/econ\_101\_class\_guide
+
+</div>
+
+<div class="section">
+
+Logic Flow
+==========
+
+Read and cycle
+--------------
+
+![Many LibGuides](images/drawing4.svg)
+
+</div>
+
+<div class="section">
+
+Logic Flow
+==========
+
+Code Sample
+-----------
+
+    foreach ($rows as $row) {
+
+    if( $row['term'] == $term_submitted[$i] ){
+        if( strlen( $row['crsidx'] ) > 0 ){
+            if( $row['crsidx'] == $category_submitted[$i] ){
+                if( strlen( $row['classidx'] ) > 0 ){
+                    if( $row['classidx'] == $section_submitted[$i] ){
+                        $rd_class[$i] = $row['lib_guide'];
+                    }
+                }
+            }
+        }
+    }
+          
+
+</div>
+
+<div class="section">
+
+Code and Links
+==============
+
+\
+\
+\
+\
+--- [CCLE Redirect code on github](https://github.com/BluesparkLabs/UCLALIB/tree/master/www/sites/all/modules/custom/ccle_redirect) (login required)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+--- [Link to these slides](http://darrowco.github.io/code4lib/slideshow2.html)
+------------------------------------------------------------------------------
+
+--- How these slides were made and hosted on github
+---------------------------------------------------
+
+--- darrowco@library.ucla.edu
+-----------------------------
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer">
+
+<div class="l-footer-wrapper">
+
+<div class="l-footer" role="contentinfo">
+
+<div class="l-region l-region--footer">
+
+<div class="panel-pane pane-block pane-menu-menu-footer">
+
+<div class="pane-content">
+
+-   <span class="footer-copyright nolink" title=""></span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
